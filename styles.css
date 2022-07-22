@@ -23,7 +23,7 @@
 /*Global styles*/
 html{
     font-size: 10px;
-
+    scroll-behavior: smooth;
 }
 
 body{
@@ -95,7 +95,7 @@ section{
 /* Header styles */
 .header{
     width: 100%;
-    height: 6rem;
+    height: 10rem;
     display: flex;
     align-items: center;
     position: fixed;
@@ -103,6 +103,7 @@ section{
     left: 0;
     background-color: var(--purple-transparent);
     z-index: 999;   /*makes this the top layer*/
+    transition: 1s;
 }
 
 .header.active{
@@ -117,8 +118,8 @@ section{
 }
 
 .logo img{
-    margin-top: 3rem;
-    max-width: 50%;
+    margin-top: 2rem;
+    max-width: 40%;
 }
 
 .hamburger-menu{
@@ -337,8 +338,8 @@ section{
     color: var(--yellow-solid);
 }
 
-/* Special Offer section styles */
-.offer{
+/* Testimonial section styles */
+.testimonials{
     background: linear-gradient(to right, rgba(250, 158, 44, .8), rgba(143, 80, 251, .8)),
     url("./images/the_paradise_bg.jpg") bottom center no-repeat;
     background-size: cover;
