@@ -38,13 +38,13 @@
                         <a href="#gallery" class="nav-link">Gallery</a>
                     </li>
                     <li class="nav-item">
+                        <a href="#testimonials" class="nav-link">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="about.html" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#check-availability" class="nav-link">Check Availability</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
+                        <a href="https://airbnb.com/h/hillside-guest-house" class="book-now btn btn-gradient">Book Now</a>
                     </li>
                 </ul>
             </nav>
@@ -67,17 +67,17 @@
         </div>
 
         <!-- BOOKING SECTION -->
-        <section id ="check-availability" class="booking">
+        <!-- <section id ="check-availability" class="booking">
             <div class="container">
 
                 <h5 class="section-head">
                     <span class="heading">Check Availability</span>
-                    <!-- <span class="sub-heading">Our Beautiful Hotels</span> -->
+                   
                 </h5>
 
                 <form action="" class="form book-form">
 
-                    <!-- dont need a destination button, only 1 house -->
+                    
                     <div class="input-group">
                         <label for="destination" class="input-label">Destination</label>
                         <input type="text" class="input" id="destination">
@@ -92,9 +92,9 @@
                     </div>
                     <div class="input-group">
                         <label for="adults" class="input-label">Adults</label>
-                        <!-- <select name="" id="adults" class="options"></select> -->
+                       
                         <select class="options" id="adults">
-                            <option value="0">0</option>  <!--0 is the default-->
+                            <option value="0">0</option>  
                             <option value="0">1</option>
                             <option value="0">2</option>
                             <option value="0">3</option>
@@ -113,7 +113,7 @@
                     </button>
                 </form>
             </div>
-        </section>
+        </section> -->
 
         <!-- GALLERY -->
         <section id="gallery" class="hotels">
@@ -195,31 +195,96 @@
             </div>
         </section>
 
-        <section class="testimonials">
+        <!-- Slideshow for reviews -->
+        <section id="testimonials" class="testimonials">
             <div class="container">
-                <div class="offer-content">
-                    <div class="discount">
-                        40% off
+
+                <h5 class="section-head">
+                    <span class="heading">Testimonials</span>
+                </h5>
+
+                <div class="slideshow">
+
+                    <!-- Reviews -->
+
+                    <div class="slide">
+                        <q class="quote">
+                            The stay was absolutely perfect! The area was so beautiful, and 
+                            getting to enjoy the wildlife was amazing! This was our anniversary vacation 
+                            that ended up being where we got engaged and I couldn&#39;t have dreamed of anything 
+                            more perfect. The hosts are so thoughtful and you can absolutely tell they are 
+                            wonderful people who think about providing everything necessary for their guests. 
+                            Thank you for everything, we will definitely be back soon!
+                        </q>
+                        <p class="author"><br>Bernadette and Alister</p>
+                        <p class="date">July 2022</p>
                     </div>
-                    <h5 class="hotel-name">The Paradise</h5>
-                    <div class="hotel-rating">
-                        <i class="fas fa-star rating"></i>
-                        <i class="fas fa-star rating"></i>
-                        <i class="fas fa-star rating"></i>
-                        <i class="fas fa-star rating"></i>
-                        <i class="fas fa-star-half rating"></i>
+    
+                    <div class="slide">
+                        <q class="quote">
+                            What a wonderful home on beautiful land. Close to town for restaurants and 
+                            groceries but removed enough for a peaceful getaway. The screened porch is 
+                            a delight and the view is great! So much space and a sky full of stars. 
+                            Friendly host!
+                        </q>
+                        <p class="author"><br>Britnee</p>
+                        <p class="date">June 2022</p>
                     </div>
-                    <p class="paragraph">
-                        dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text
-                    </p>
-                    <a href="#" class="btn btn-gradient">Redeem Offer
-                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
-                    </a>
+    
+                    <div class="slide">
+                        <q class="quote">
+                            A panorama of Texas Hill Country views, a spacious and well appointed accommodation, 
+                            and wonderful hospitality greeted our arrival. This is a superb guesthouse in a 
+                            beautiful setting. It is sparkling clean with amazing amenities. This beautiful 
+                            home met and exceeded my expectations. Highly recommended!
+                        </q>
+                        <p class="author"><br>Alan</p>
+                        <p class="date">June 2022</p>
+                    </div>
+    
+                    <div class="slide">
+                        <q class="quote">
+                            The Hillside Guest House was an unbelievable vacation! Ketsani & Loren are great hosts 
+                            (the cookies were incredible!) and the home is beautiful. The house also offers ranging 
+                            views of the Hill Country - I highly recommend drinking your morning coffee on the porch!
+                            This is a trip we will be talking about for a long time. Thank you Loren + Ketsani for 
+                            your hospitality and we hope to make our return soon!
+                        </q>
+                        <p class="author"><br>Tommy</p>
+                        <p class="date">May 2022</p>
+                    </div>
+    
+                    <div class="slide">
+                        <q class="quote">
+                            Do not hesitate to stay at this beautiful home. It was perfect for my husband and I, 
+                            for a longer get away. We made breakfasts and dinner&#39;s in the perfect, large kitchen.
+                            A beautiful screened in patio for sun rises, sunsets and all the in between. We will 
+                            definitely be staying here again. Can&#39;t wait to see everything they do with this 
+                            beautiful land. Loren and Katsani were excellent hosts, with several home made goodies 
+                            during our stay.
+                        </q>
+                        <p class="author"><br>Angie</p>
+                        <p class="date">April 2022</p>
+                    </div>
+
+                    <!-- Next/prev buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
+
+                <!-- Dots/bullets/indicators -->
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <!-- <section id="contact" class="contact">
             <div class="container">
                 <h5 class="section-head">
                     <span class="heading">Contact</span>
@@ -261,7 +326,7 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <footer class="footer">

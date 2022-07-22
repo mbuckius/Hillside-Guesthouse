@@ -148,7 +148,7 @@ section{
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--purple-solid);
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,9 +164,8 @@ section{
     transform: scale(1);
 }
 
-
-.nav-item:not(:last-child){
-    margin-bottom: .5rem;       /*add spacing between each menu item*/
+.nav-item{
+    margin-bottom: 1rem;       /*add spacing between each menu item*/
 }
 
 .nav-link{
@@ -177,7 +176,16 @@ section{
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 1rem;
+}
 
+.menu-open .book-now{
+    display: block;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem;
 }
 
 /* Hero section styles */
@@ -222,8 +230,6 @@ section{
     font-weight: 300;
     font-family: 'Courgette', cursive;
 }
-
-
 
 /* Booking section styles */
 .booking{
@@ -345,29 +351,85 @@ section{
     background-size: cover;
 }
 
-.offer-content{
-    background-color: white;
-    text-align: center;
-    padding: 5rem 1rem;
+.slideshow{
     position: relative;
-    overflow: hidden;
+    background: white;
+    height: 30rem;
 }
 
-.discount{
-    background-color: var(--yellow-solid);
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem;
+.slide{
+    display: none;
+    padding: 80px;
+    text-align: center;
+}
+
+.prev,
+.next{
+    cursor: pointer;        /*changes the cursor when user hovers over the button, looks clickable*/
+    
+    position: absolute;     /*position specifies the type of positioning method used for an element*/
+                            /*absolute means the element is positioned relative to its first positioned (not static) ancestor element*/
+    
+    top: 50%;               /*top affects the vertical position of a positioned element*/
+                            /*since the position is absolute, top sets the top edge of an element to a unit above/below the top edge of its nearest positioned ancestor.*/
+                            /* % sets the top edge position in % of containing element. Negative values are allowed */
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: black;
     font-weight: bold;
-    text-transform: uppercase;
-    outline: 2px solid var(--yellow-solid);
-    outline-offset: .5rem;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    }
+
+/* Position the "next button" to the right */
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
-.paragraph{
-    color: #a5a5a5;
-    margin-bottom: 2.5rem;
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    /* background: #ddd; */
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Add an italic font style to all quotes */
+q {
+    font-style: italic;
+    font-size: large;
+}
+
+/* Add a blue color to the author */
+.author {
+    color: cornflowerblue;
+    font-size: large;
 }
 
 /* Contact section styles */
@@ -461,6 +523,9 @@ section{
     z-index: -1;
 }
 
+.info{
+    margin-top: 8rem;
+}
 .about-paragraph{
     color: black;
     font-size: large;
@@ -470,8 +535,12 @@ section{
     text-align: center;
 }
 
-.about-paragraph:last-child{
-    margin-bottom: 8rem;
+
+
+.amenities{
+    background: linear-gradient(to right, rgba(250, 158, 44, .8), rgba(143, 80, 251, .8)),
+    url("./images/the_paradise_bg.jpg") bottom center no-repeat;
+    background-size: cover;
 }
 
 .list-amenities{
