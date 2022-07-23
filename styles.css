@@ -103,7 +103,6 @@ section{
     left: 0;
     background-color: var(--purple-transparent);
     z-index: 999;   /*makes this the top layer*/
-    transition: 1s;
 }
 
 .header.active{
@@ -119,7 +118,7 @@ section{
 
 .logo img{
     margin-top: 2rem;
-    max-width: 40%;
+    max-width: 22rem;
 }
 
 .hamburger-menu{
@@ -353,14 +352,14 @@ section{
 
 .slideshow{
     position: relative;
-    background: white;
-    height: 30rem;
 }
 
 .slide{
+    background: white;
     display: none;
     padding: 80px;
     text-align: center;
+    min-height: max-content;
 }
 
 .prev,
@@ -491,11 +490,12 @@ q {
     bottom: 0;
     left: 0;
     background-color: black;
-    z-index: 999;   /*makes this the top layer*/
+    
 }
 
-.footer.active{
-    background-color: black;
+.logo-footer img{
+    max-width: 50rem;
+    justify-content: center;
 }
 
 
@@ -535,8 +535,6 @@ q {
     text-align: center;
 }
 
-
-
 .amenities{
     background: linear-gradient(to right, rgba(250, 158, 44, .8), rgba(143, 80, 251, .8)),
     url("./images/the_paradise_bg.jpg") bottom center no-repeat;
@@ -560,57 +558,26 @@ q {
 }
 
 /* Media queries */
+
+/* On screens that are 768px wide or more */
 @media screen and (min-width: 768px) {
 
     /* Header section styles */
     .header{
-        height: 10rem;
+        height: 10rem;  
+        transition: 1s;              
     }
     .header.active{
-        height: 6rem;
+        height: 6rem;           /*when user scrolls, header gets smaller*/
     }
 
     /* Hero section styles */
     .title{
         font-size: 6rem;
     }
-
-    /* Contact section styles  */
-    .contact-content{
-        justify-content: space-between;
-    }
-
-    .traveler-wrap{
-        display: block;
-        flex: 0 0 45%;
-    }
-
-    .traveler-wrap img{
-        width: 100%;
-    }
-
-    .contact-form{
-        flex: 0 0 50%;
-        align-self: flex-start;
-    }
-
-    .input-group-wrap{
-        display: flex;
-    }
-
-    .input-group-wrap .input-group{
-        width: 50%;
-        margin-right: 2rem;
-    }
-
-    .input-group-wrap .input-group:last-child{
-        margin-right: 0;
-    }
-
-
+    
     /* Footer section styles  */
-    .footer{
-        overflow-x: hidden;
+    /* .footer{
         flex: 0 0 60%;
     }
 
@@ -630,14 +597,10 @@ q {
 
     .footer-heading{
         margin-bottom: 0rem;
-    }
-
-    .social-media-wrap{
-        flex: 0 0 40%;
-        margin-left: 2.5rem;
-    }
+    } */
 }
 
+/* On screens that are 768px wide or more */
 @media screen and (min-width: 1000px) {
     section:not(.booking){
         padding: 10rem 0;
@@ -649,6 +612,7 @@ q {
     }
 
     .nav-list{
+        margin-top: 1rem;
         position: initial;
         width: initial;
         height: initial;
@@ -718,6 +682,7 @@ q {
     }
 }
 
+/* On screens that are 1200px wide or more */
 @media screen and (min-width: 1200px){
     .book-form .input-group:first-child{
         flex: 0 0 30%;
