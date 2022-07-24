@@ -45,6 +45,12 @@ section{
     padding: 5rem 0;
 }
 
+/* Add an italic font style to all quotes */
+q {
+    font-style: italic;
+    font-size: large;
+}
+
 /* Reusable styles */
 .container{
     width: 100%;
@@ -417,12 +423,6 @@ section{
 /* Add a background color to the active dot/circle */
 .active, .dot:hover {
     background-color: #717171;
-}
-  
-/* Add an italic font style to all quotes */
-q {
-    font-style: italic;
-    font-size: large;
 }
 
 /* Add a blue color to the author */
